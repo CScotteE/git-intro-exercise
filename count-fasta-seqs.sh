@@ -94,10 +94,11 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
-for filepath in "$@"
+for filepath in "$@";	#Calls each variable previously specified
 do
-    basename "$@"
+    basename "$@";
 	#TEST echo "# of lines"
-	grep ""| wc -l
+	grep ""| wc -l;
 done
 
+## added semicolons
