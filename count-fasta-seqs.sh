@@ -97,7 +97,7 @@ echo "$@"
 # This is a for loop that loops through 
 for filepath in "$@"
 do
-    basename "$@"
-	TEST echo "# of lines"
-	grep "[ATCG]" | wc -l
+    file=`basename "$@"`
+	echo "$file"
+	#grep -v '>' "$file" | wc -l
 done
