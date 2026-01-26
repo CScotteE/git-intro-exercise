@@ -94,4 +94,10 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
+for filepath in "$@"
+do
+    basename "$@"
+	#TEST echo "# of lines"
+	grep ""| wc -l
+done
 
