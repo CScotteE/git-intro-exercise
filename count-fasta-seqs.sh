@@ -94,7 +94,8 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
-for filepath in "$@";	#Calls each variable previously specified
+# This is a for loop that loops through 
+for filepath in "$@";   #Calls each variable previously specified
 do
     basename "$@";
 	#TEST echo "# of lines"
