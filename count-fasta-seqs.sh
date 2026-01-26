@@ -94,6 +94,7 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
+# This is a for loop that loops through 
 for filepath in "$@"
 do
     basename "$@"
