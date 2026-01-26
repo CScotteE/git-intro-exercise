@@ -94,10 +94,13 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
-for filepath in "$@";
+# This is a for loop that loops through 
+for filepath in "$@";   #Calls each variable previously specifie
 do
 name=basename "$@"
 sequencenum=grep "[$ATCG]" | wc
 echo "$name"
 echo "$sequencenum"
 done
+
+## added semicolons
