@@ -97,6 +97,6 @@ echo "$@"
 for filepath in "$@"
 do
     basename "$@"
-	#TEST echo "# of lines"
-	grep ""| wc -l
+	TEST echo "# of lines"
+	grep "[ATCG]" | wc -l
 done
