@@ -94,6 +94,10 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
-for x in "$@"; do
- 
-echo "$basename 
+for filepath in "$@";
+do
+name=basename "$@"
+sequencenum=grep "[$ATCG]" | wc
+echo "$name"
+echo "$sequencenum"
+done
