@@ -94,3 +94,4 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
+for x in example-seqs1.fasta example-seqs2.fasta; do echo $@; done
