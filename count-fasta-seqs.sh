@@ -94,4 +94,6 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
-for 
+for x in "$@"; do
+ 
+echo "$basename 
