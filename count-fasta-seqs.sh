@@ -94,4 +94,10 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
-for x in example-seqs1.fasta example-seqs2.fasta; do echo $@; done
+for filepath in "$@"
+do
+    basename "$@"
+	#TEST echo "# of lines"
+	grep ""| wc -l
+done
+
