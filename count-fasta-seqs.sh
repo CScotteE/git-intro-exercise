@@ -95,9 +95,11 @@ echo "$@"
 # ADD YOUR CODE BELOW:
 
 # This is a for loop that loops through 
-for filepath in "$@"
-do
-    file=`basename "$@"`
-	echo "$file"
-	#grep -v '>' "$file" | wc -l
-done
+for filepath in "$@";   #Calls each variable previously specifie
+	do
+name=basename "$@"
+sequencenum=grep "[$ATCG]" | wc
+echo "$name"
+echo "$sequencenum"
+
+## added semicolons
