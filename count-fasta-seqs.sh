@@ -63,7 +63,7 @@
 # files that were 'given to' this script. The variable "$@" will be very useful
 # for this. Let's take a look at what it gives us:
 
-echo "$@"
+#echo "$@"
 
 # How are you going to work with each file path?
 # HINT: for loop (remember "for do done"?)
@@ -112,7 +112,6 @@ for filepath in "$@"; do
         # Add to total count
         total=$(expr $total + $sequencecount)
 
-	echo "$sequencecount $filename"
 done
 
 # Print the total number of counts
