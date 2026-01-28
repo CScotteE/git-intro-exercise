@@ -104,3 +104,6 @@ do
         echo $count $file_name
 done
 echo $total
+
+
+# Good job team!
