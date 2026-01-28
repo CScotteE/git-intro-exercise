@@ -116,3 +116,5 @@ done
 
 # Print the total number of counts
 echo "$total"
+
+# Good job team!
