@@ -118,9 +118,9 @@ done
 echo "$total"
 
 #Fun Animal Facts
-echo "G. mindorensis is a solitary gecko native to the Phillippines..."
-echo "I. arborens is a Philippine lizard in the skink family..."
-echo "C. philippinicus is found in lowland riparian forests..."
-echo "Who knows what other amazing creatures lie in the hidden places of our world..."
+#echo "G. mindorensis is a solitary gecko native to the Phillippines..."
+#echo "I. arborens is a Philippine lizard in the skink family..."
+#echo "C. philippinicus is found in lowland riparian forests..."
+#echo "Who knows what other amazing creatures lie in the hidden places of our world..."
 
 # Good job team!
