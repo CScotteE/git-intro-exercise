@@ -97,12 +97,13 @@ echo "$@"
 # This is a for loop that loops through 
 for filepath in "$@"; do
 	#Print file name being analyzed
-	echo "file name: $filepath"
+	filename= basename "$filepath"
 
 	#Print number of sequences per file
 	sequencecount=`grep -e "[^ACGT]" "$filepath" | wc -l`
 	echo "# of sequences in file: $sequencecount"
 
+	echo "$sequencecount $filename"
 done
 
 ## added semicolons
