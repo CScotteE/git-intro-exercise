@@ -94,16 +94,26 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
-# This is a for loop that loops through 
-for filepath in "$@"; do
-	#Print file name being analyzed
-	filename= basename "$filepath"
+# Initialize total count that will be used in the loop later
+total=0
 
-	#Print number of sequences per file
-	sequencecount=`grep -e "[^ACGT]" "$filepath" | wc -l`
-	echo "# of sequences in file: $sequencecount"
+# This is a for loops that loops through 
+for filepath in "$@"; do
+	# Print file name being analyzed
+	filename=$(basename "$filepath")
+
+        # Count sequences wherever lines start with ">"
+        sequencecount=$(grep -c "^>" "$filepath")
+
+	# Print number of sequences per file
+	# sequencecount=`grep -e "[^ACGT]" "$filepath" | wc -l`
+	echo "$sequencecount $filename"
+
+        # Add to total count
+        total=$(expr $total + $sequencecount)
 
 	echo "$sequencecount $filename"
 done
 
-## added semicolons
+# Print the total number of counts
+echo "$total"
