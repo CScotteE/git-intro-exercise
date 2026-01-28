@@ -63,7 +63,7 @@
 # files that were 'given to' this script. The variable "$@" will be very useful
 # for this. Let's take a look at what it gives us:
 
-echo "$@"
+#echo "$@"
 
 # How are you going to work with each file path?
 # HINT: for loop (remember "for do done"?)
@@ -94,15 +94,25 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
-# This is a for loop that loops through 
-for filepath in "$@"; do
-	#Print file name being analyzed
-	echo "file name: $filepath"
+# Initialize total count that will be used in the loop later
+total=0
 
-	#Print number of sequences per file
-	sequencecount=`grep -e "[^ACGT]" "$filepath" | wc -l`
-	echo "# of sequences in file: $sequencecount"
+# This is a for loops that loops through 
+for filepath in "$@"; do
+	# Print file name being analyzed
+	filename=$(basename "$filepath")
+
+        # Count sequences wherever lines start with ">"
+        sequencecount=$(grep -c "^>" "$filepath")
+
+	# Print number of sequences per file
+	# sequencecount=`grep -e "[^ACGT]" "$filepath" | wc -l`
+	echo "$sequencecount $filename"
+
+        # Add to total count
+        total=$(expr $total + $sequencecount)
 
 done
 
-## added semicolons
+# Print the total number of counts
+echo "$total"
